@@ -6,8 +6,8 @@ provider "aws" {
 
 resource "aws_security_group_rule" "rds-user" {
   type        = "ingress"
-  from_port   = "*" # Replace with the desired port number
-  to_port     = "*" # Replace with the desired port number
+  from_port   = 0 # Replace with the desired port number
+  to_port     = 65535 # Replace with the desired port number
   protocol    = "tcp"
   cidr_blocks = ["122.161.52.113/32"] # Replace with the desired IP range
   
